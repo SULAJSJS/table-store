@@ -28,6 +28,7 @@ input {
   outline: 1px solid #000;
   border-style: none;
   text-align: center;
+  padding-right: 10px;
 }
 .months {
   display: flex;
