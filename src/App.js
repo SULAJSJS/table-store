@@ -148,61 +148,46 @@ function App() {
 
   return (
     <div className="App">
-      {/* <table>
-        <thead>
-          {json[0].months.map((item, i) => (
-            <tr>
-              <th>{item.name}</th>
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {/* {json.map((item, i) => (
-            <input type="text" value={} />
-          ))} 
-          {json[num].months.map((item) => (
-            <input type="text" value={item.value} />
-          ))}
-        </tbody>
-      </table> */}
-      <div className="flex">
-        <div>
-          <div className="months">
-            <div></div>
-            {json[num].months.map((item) => (
-              <div>{item.name}</div>
+      <div className="wrapper">
+        <div className="flex">
+          <div>
+            <div className="months">
+              <div className="empty-month"></div>
+              {json[num].months.map((item) => (
+                <div className="month">{item.name}</div>
+              ))}
+            </div>
+            {market?.map((item, i) => (
+              <Table setIsMarket={setIsMarket} {...item} key={i} market={market} />
             ))}
           </div>
-          {market?.map((item, i) => (
-            <Table setIsMarket={setIsMarket} {...item} key={i} market={market} />
-          ))}
+          <div className="total">
+            <div className="total-item"></div>
+            {sumResult.map((item, i) => (
+              <div className="total-item" key={i}>
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="total">
-          <div className="total-item"></div>
-          {sumResult.map((item, i) => (
-            <div className="total-item" key={i}>
-              {item}
-            </div>
-          ))}
+        <div className="monthsTotal">
+          <div className="totals">totals</div>
+          {/* {market[0].months.map((item) => ( */}
+          <div>{jan}</div>
+          <div>{feb}</div>
+          <div>{mar}</div>
+          <div>{apr}</div>
+          <div>{may}</div>
+          <div>{jun}</div>
+          <div>{jul}</div>
+          <div>{aug}</div>
+          <div>{sep}</div>
+          <div>{oct}</div>
+          <div>{nov}</div>
+          <div>{dec}</div>
+          {/* ))} */}
+          <div>{totalsOfTotals}</div>
         </div>
-      </div>
-      <div className="monthsTotal">
-        <div>totals</div>
-        {/* {market[0].months.map((item) => ( */}
-        <div>{jan}</div>
-        <div>{feb}</div>
-        <div>{mar}</div>
-        <div>{apr}</div>
-        <div>{may}</div>
-        <div>{jun}</div>
-        <div>{jul}</div>
-        <div>{aug}</div>
-        <div>{sep}</div>
-        <div>{oct}</div>
-        <div>{nov}</div>
-        <div>{dec}</div>
-        {/* ))} */}
-        <div>{totalsOfTotals}</div>
       </div>
     </div>
   );

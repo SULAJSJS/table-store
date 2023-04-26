@@ -9,31 +9,66 @@
   margin: 0 auto;
 }
 
+.wrapper {
+  height: 1000px;
+  overflow-y: auto;
+  margin-bottom: 100px;
+}
+
 .flex {
   display: flex;
+}
+
+.store-wrap {
+  position: sticky;
+  width: 100px;
+  left: 0;
+}
+
+.totals {
+  position: sticky;
+  width: 100px;
+  left: 0;
+  background-color: #fff;
+}
+
+.empty-month {
+  position: sticky;
+  width: 100px;
+  height: 40px;
+  left: 0;
+  top: 0;
+  background-color: #fff;
 }
 
 .store {
   width: 100px;
   height: 40px;
-  outline: 1px solid #000;
+  border: 1px solid #000;
   text-align: center;
   padding-top: 10px;
-  border-style: none !important;
+  background-color: #fff;
 }
 
 input {
   padding-left: 10px;
   font-size: 14px;
-  outline: 1px solid #000;
-  border-style: none;
+  border: 1px solid #000;
   text-align: center;
   padding-right: 10px;
+  -moz-appearance: textfield;
 }
 .months {
   display: flex;
   justify-content: flex-end;
   text-align: center;
+  height: 40px;
+  position: sticky;
+  top: 0;
+}
+
+.month {
+  background-color: #fff;
 }
 
 .total {
@@ -46,15 +81,14 @@ input {
   width: 100px !important;
   height: 40px;
   padding-top: 10px;
-  outline: 0.5px solid #000;
-  border-style: none !important;
+  border: 1px solid #000;
 }
 
 .months div {
   width: 100px !important;
   height: 40px;
   padding-top: 10px;
-  outline: 1px solid #000;
+  border: 1px solid #000;
 }
 
 .col {
@@ -73,13 +107,14 @@ input {
 
 .monthsTotal {
   display: flex;
-  justify-content: flex-end;
+  width: 1400px;
+  /* justify-content: flex-end; */
 }
 
 .monthsTotal div {
   width: 100px !important;
   height: 40px;
   padding-top: 10px;
-  outline: 1px solid #000;
+  border: 1px solid #000;
   text-align: center;
 }

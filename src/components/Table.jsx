@@ -31,7 +31,9 @@ const Table = ({ months, store, market, setIsMarket }) => {
 
   return (
     <div className="row">
-      <div className="store">{storeEl.name}</div>
+      <div className="store-wrap">
+        <div className="store">{storeEl.name}</div>
+      </div>
       <div className="values">
         {months.map((el, i) => (
           <input
